@@ -1,3 +1,13 @@
+//
+//  StarRatingView.swift
+//  RatingApp
+//
+//  Created by Mohammad on 9/6/25.
+//
+
+import SwiftUI
+
+
 public struct StarRatingView: View {
     @Binding private var rating: Float
     @Binding private var width: CGFloat
@@ -68,6 +78,7 @@ public struct StarRatingView: View {
         Image(systemName: "star.fill")
             .resizable()
             .scaledToFit()
+            .foregroundStyle(color)
             .frame(width: 24, height: 24)
     }
 
@@ -75,6 +86,7 @@ public struct StarRatingView: View {
         Image(systemName: "star")
             .resizable()
             .scaledToFit()
+            .foregroundStyle(color.opacity(0.3))
             .frame(width: 24, height: 24)
     }
 
